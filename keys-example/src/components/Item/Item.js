@@ -15,24 +15,26 @@ class Item extends Component {
         const { children, remove } = this.props; 
 
         return (
-            <li style={this.state} className="collection-item">
-                <div className="row">
-                    <div className="col s12">
-                        <h5 className="center">{children}</h5>
+            <div>
+                <li style={this.state} className="collection-item">
+                    <div className="row">
+                        <div className="col s12">
+                            <h5 className="center">{children}</h5>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col s4 center">
-                        <button onClick={this.changeColor} className="btn white black-text">Change Color</button>
+                    <div className="row">
+                        <div className="col s4 center">
+                            <button onClick={this.changeColor} className="btn white black-text">Change Color</button>
+                        </div>
+                        <div className="col s4">
+                            <h5 className="center">{this.state.backgroundColor}</h5>
+                        </div>
+                        <div className="col s4 center">
+                            <button onClick={remove} className="btn red">Remove</button>
+                        </div>
                     </div>
-                    <div className="col s4">
-                        <h5 className="center">{this.state.backgroundColor}</h5>
-                    </div>
-                    <div className="col s4 center">
-                        <button onClick={remove} className="btn red">Remove</button>
-                    </div>
-                </div>
-            </li>
+                </li>
+            </div>
         )
     }
 }

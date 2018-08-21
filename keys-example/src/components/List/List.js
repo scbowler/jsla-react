@@ -43,9 +43,11 @@ class List extends Component {
         });
 
         return (
-            <ul className="collection">
-                {listElements}
-            </ul>
+            <div>
+                <ul className="collection">
+                    {listElements}
+                </ul>
+            </div>
         );
     }
 }
