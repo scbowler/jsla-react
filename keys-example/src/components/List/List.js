@@ -27,7 +27,7 @@ class List extends Component {
         ]
     }
 
-    removeItem(index){
+    removeItem = (index) => {
         const listCopy = this.state.listData.slice();
 
         listCopy.splice(index, 1);
@@ -39,15 +39,13 @@ class List extends Component {
 
     render(){
         const listElements = this.state.listData.map( (item, index) => {
-            return <Item key={index} remove={() => this.removeItem(index)}>{item.text}</Item>;
+            return <Item key={item.id} remove={this.removeItem}>{item.text}</Item>;
         });
 
         return (
-            <div>
-                <ul className="collection">
-                    {listElements}
-                </ul>
-            </div>
+            <ul className="collection">
+                {listElements}
+            </ul>
         );
     }
 }

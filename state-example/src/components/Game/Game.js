@@ -13,8 +13,8 @@ class Game extends Component {
     renderCount = 0
 
     componentDidMount(){
-        // setInterval(() => this.setRandomNumber(), 1500);
-        this.setRandomNumber();
+        setInterval(() => this.setRandomNumber(), 1500);
+        // this.setRandomNumber();
     }
 
     setRandomNumber(){

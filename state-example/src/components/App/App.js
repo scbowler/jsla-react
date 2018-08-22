@@ -1,7 +1,7 @@
 import 'materialize-css/dist/css/materialize.min.css';
 import React, { Component } from 'react';
-import Game from '../Game';
-// import Game2 from '../Game2';
+// import Game from '../Game';
+import Game2 from '../Game2';
 
 class App extends Component {
 	render() {
@@ -11,8 +11,8 @@ class App extends Component {
 					<h1>State Example</h1>
 					<h3>Guessing Game</h3>
 				</header>
-				<Game/>
-				{/* <Game2/> */}
+				{/* <Game/> */}
+				<Game2/>
 			</div>
 		);
 	}
